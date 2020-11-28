@@ -1,4 +1,4 @@
-let search = process.argv.slice(2)[0];
+let search = "galaxy s20";//process.argv.slice(2)[0];
 
 const open = require("open");
 const prompt = require('prompt');
@@ -43,6 +43,14 @@ if (typeof search === 'undefined') {
         
     });
 }
+else{
+    sites.forEach(element => {
+        element = element.split("%s").join(search)
+        open(decodeURI(encodeURI(element)))
+    });
+}
+
+
 
 
 
