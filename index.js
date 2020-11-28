@@ -1,5 +1,10 @@
 let search = process.argv.slice(2)[0];
-if (typeof search === 'undefined') {search = '';}
+
+const open = require("open");
+const prompt = require('prompt');
+
+
+
 
 const sites = [
     "https://www.hepsiburada.com/ara?q=%s",
@@ -22,10 +27,24 @@ const sites = [
 
 ]
 
-const open = require("open");
+if (typeof search === 'undefined') {
+    prompt.start();
 
-sites.forEach(element => {
-    element = element.split("%s").join(search)
-    open(decodeURI(encodeURI(element)))
-});
+    prompt.get(['search'], function (err, result) {
+        console.log('Command-line input received:');
+        console.log('  Search: ' + result.search);
+        search = result.search;
+
+
+        sites.forEach(element => {
+            element = element.split("%s").join(search)
+            open(decodeURI(encodeURI(element)))
+        });
+        
+    });
+}
+
+
+
+
 
