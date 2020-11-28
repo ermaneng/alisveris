@@ -1,10 +1,7 @@
-let search = "galaxy s20";//process.argv.slice(2)[0];
+let search = process.argv.slice(2)[0];
 
 const open = require("open");
 const prompt = require('prompt');
-
-
-
 
 const sites = [
     "https://www.hepsiburada.com/ara?q=%s",
@@ -49,10 +46,3 @@ else{
         open(decodeURI(encodeURI(element)))
     });
 }
-
-
-
-
-
-
-
