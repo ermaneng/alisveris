@@ -9,7 +9,8 @@
 
 </head>
 <body>
-<input id="searchInput" type="text" name="search" placeholder="Search" style="width:300px; height: 40px; line-height: 40px; padding: 0px 10px;" />
+<label for="searchInput">Search</label>
+<input id="searchInput" type="text" name="search" placeholder="Search" style="width:300px; height: 40px; line-height: 40px; padding: 0 10px;" />
 
 <script>
     let interval;
@@ -24,6 +25,7 @@
 
     function search(val){
         const sites = [
+            "https://www.google.com/search?q=%s&tbm=shop",
             "https://www.hepsiburada.com/ara?q=%s",
             "https://www.n11.com/arama?q=%s",
             "https://www.trendyol.com/tum--urunler?q=%s",
@@ -41,7 +43,8 @@
             "https://www.migros.com.tr/arama?q=%s",
             "https://www.carrefoursa.com/tr/search/?text=%s",
             "https://www.koctas.com.tr/search/?text=%s",
-
+            "https://www.akakce.com/arama/?q=%s",
+            "https://www.cimri.com/arama?q=%s"
         ];
 
 
