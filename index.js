@@ -4,6 +4,7 @@ const open = require("open");
 const prompt = require('prompt');
 
 const sites = [
+    "https://www.google.com/search?q=%s&tbm=shop",
     "https://www.hepsiburada.com/ara?q=%s",
     "https://www.n11.com/arama?q=%s",
     "https://www.trendyol.com/tum--urunler?q=%s",
@@ -21,7 +22,8 @@ const sites = [
     "https://www.migros.com.tr/arama?q=%s",
     "https://www.carrefoursa.com/tr/search/?text=%s",
     "https://www.koctas.com.tr/search/?text=%s",
-
+    "https://www.akakce.com/arama/?q=%s",
+    "https://www.cimri.com/arama?q=%s"
 ]
 
 if (typeof search === 'undefined') {
