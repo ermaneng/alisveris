@@ -54,6 +54,7 @@
             window.open(decodeURI(encodeURI(siteUrl)), `w${index}`);
             if (index === sites.length-1) {
                 clearInterval(interval);
+                index = 0;
             }
             else
             {
